@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>낭만 라디오 - 기타 치는 고양이 쉼터</title>
+    <meta name="description" content="기타를 치고 노래하는 김타콩입니다. 신청곡 리스트, 노래 추천, 실시간 플레이!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="decorations">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <div class="top-bar">
+            <button class="secondary-btn admin-top-btn" onclick="toggleAdminMode()" id="btn-admin-toggle">
+                <i class="fa-solid fa-lock"></i> 관리자 모드
+            </button>
+        </div>
+        <!-- Header / Hero Section -->
+        <header class="hero-section">
+            <div class="mascot-container">
+                <img src="guitar_cat.png" alt="기타 치는 귀여운 고양이" id="mascot-img" class="mascot-img">
+                <div class="music-notes">
+                    <span class="note note-1"><i class="fa-solid fa-music"></i></span>
+                    <span class="note note-2"><i class="fa-solid fa-music"></i></span>
+                    <span class="note note-3"><i class="fa-solid fa-music"></i></span>
+                </div>
+            </div>
+            <div class="hero-content">
+                <span class="badge">LIVE RADIO & GUITAR</span>
+                <h1 id="main-title">낭만 고양이의 락카페</h1>
+                <p class="hero-subtitle">라디오 채널에서 노래하고 기타 치는 집사입니다. 여러분의 따뜻한 이야기와 신청곡을 환영해요! 🐾🎸</p>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tab-navigation">
+            <button class="tab-btn active" id="tab-btn-songs" onclick="switchTab('songs')">
+                <i class="fa-solid fa-guitar"></i> 신청 가능 곡 목록
+            </button>
+            <button class="tab-btn" id="tab-btn-board" onclick="switchTab('board')">
+                <i class="fa-solid fa-comment-medical"></i> 노래 추천 게시판
+            </button>
+            <button class="tab-btn" id="tab-btn-playlist" onclick="switchTab('playlist')">
+                <i class="fa-solid fa-compact-disc"></i> 김타콩 플레이리스트
+            </button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- SECTION 1: SONGS LIST -->
+            <section id="section-songs" class="content-section active">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <h2>신청곡 리스트</h2>
+                        <p class="section-desc">현재 연주 가능한 곡들입니다. 라디오에서 언제든지 신청해주세요!</p>
+                    </div>
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="songs-search-input" placeholder="곡 제목 또는 가수 검색..."
+                            oninput="filterSongs()">
+                    </div>
+                </div>
+                <div class="songs-count">
+                    총 <span id="total-songs-count">0</span>곡 등록됨
+                </div>
+                <div class="songs-grid" id="songs-grid-container">
+                    <!-- Dynamic rendering -->
+                    <div class="loading-spinner">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i> 곡 목록을 불러오고 있습니다...
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: RECOMMENDATION BOARD -->
+            <section id="section-board" class="content-section">
+                <div class="section-header board-header" style="justify-content: center; flex-direction: column; text-align: center;">
+                    <div class="section-title-wrap" style="margin-bottom: 15px;">
+                        <h2>노래 추천 게시판</h2>
+                        <p class="section-desc">제가 불러줬으면 하는 노래, 추천하고 싶은 노래를 남겨주세요!</p>
+                    </div>
+                    <a href="https://forms.google.com" target="_blank" class="primary-btn" id="btn-open-recommend" style="text-decoration: none;">
+                        <i class="fa-solid fa-pen"></i> 노래 추천하러 가기 (구글 폼)
+                    </a>
+                </div>
+                <div class="static-board-info" style="text-align: center; padding: 40px 20px;">
+                    <div style="font-size: 50px; margin-bottom: 20px; color: var(--accent-orange);"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <h3>노래 추천과 사연을 보내주세요!</h3>
+                    <p style="color: var(--text-muted); margin: 10px 0 20px 0; font-size: 14px; line-height: 1.8;">
+                        상단의 버튼을 클릭하여 구글 폼으로 추천곡과 사연을 신청하실 수 있습니다.<br>
+                        보내주신 노래들은 김타콩이 확인하여 플레이리스트에 추가해 드립니다! 🐾🎸
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECTION 3: CURRENT PLAYLIST (WITH ADMIN EDIT) -->
+            <section id="section-playlist" class="content-section">
+                <div class="section-header playlist-header">
+                    <div class="section-title-wrap">
+                        <h2>김타콩 플레이리스트</h2>
+                        <p class="section-desc">방송 중이거나 최근에 즐겨 듣고 연습하고 있는 곡 리스트입니다.</p>
+                    </div>
+                </div>
+
+                <!-- Admin Auth Panel (Hidden by default) -->
+                <div class="admin-panel" id="admin-auth-panel" style="display: none;">
+                    <div class="admin-input-group">
+                        <label for="admin-passcode-input">관리자 비밀번호 입력:</label>
+                        <div class="admin-input-wrap">
+                            <input type="password" id="admin-passcode-input" placeholder="관리자 비밀번호">
+                            <button class="primary-btn" onclick="authenticateAdmin()" id="btn-admin-auth">인증</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Playlist Editor (Hidden by default) -->
+                <div class="admin-editor-panel" id="admin-editor-panel" style="display: none;">
+                    <div class="admin-editor-header">
+                        <h3><i class="fa-solid fa-user-gear"></i> 플레이리스트 관리</h3>
+                        <span class="admin-badge">Admin Mode Active</span>
+                    </div>
+                    <div class="add-playlist-item-form">
+                        <input type="text" id="new-play-title" placeholder="곡 제목">
+                        <input type="text" id="new-play-artist" placeholder="가수">
+                        <button class="add-btn" onclick="addPlaylistItem()" id="btn-add-playlist-item">
+                            <i class="fa-solid fa-plus"></i> 추가
+                        </button>
+                    </div>
+                    <div class="editor-buttons">
+                        <button class="save-btn" onclick="savePlaylistChanges()" id="btn-save-playlist">
+                            <i class="fa-solid fa-floppy-disk"></i> 변경사항 저장
+                        </button>
+                        <button class="cancel-btn" onclick="exitAdminMode()" id="btn-cancel-playlist">
+                            취소
+                        </button>
+                    </div>
+                </div>
+
+                <div class="playlist-container" id="playlist-container">
+                    <!-- Dynamic rendering -->
+                    <div class="loading-spinner">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i> 플레이리스트를 불러오고 있습니다...
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p>© 2026 낭만 고양이. All Rights Reserved. Designed with Love 🐾</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
