@@ -9,6 +9,7 @@ let currentPasscode = "";
 document.addEventListener("DOMContentLoaded", () => {
     fetchSongs();
     fetchPlaylist();
+    fetchRecommendations();
 });
 
 // Tab switching logic
@@ -287,4 +288,140 @@ function escapeHtml(str) {
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
+}
+
+// ----------------------------------------------------
+// Section 4: Google Sheets Recommendation Integration
+// ----------------------------------------------------
+// 구글 앱스 스크립트 웹 앱 URL을 여기에 붙여넣으세요.
+const APPS_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+
+// Fetch recommendations from Google Sheets
+async function fetchRecommendations() {
+    const container = document.getElementById("recommendations-container");
+    if (!container) return;
+
+    if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL")) {
+        container.innerHTML = `
+            <div class="no-recommendations">
+                <i class="fa-solid fa-triangle-exclamation" style="font-size: 40px; color: var(--accent-orange); margin-bottom: 15px; display: block;"></i>
+                구글 스프레드시트 연동 설정이 필요합니다.<br>
+                <span style="font-size: 13px; color: var(--text-muted); display: block; margin-top: 8px;">
+                    <code>app.js</code> 파일의 <code>APPS_SCRIPT_URL</code> 변수에 웹 앱 주소를 설정해주세요!
+                </span>
+            </div>
+        `;
+        return;
+    }
+
+    try {
+        const response = await fetch(APPS_SCRIPT_URL);
+        if (!response.ok) throw new Error("Failed to fetch recommendations");
+        const recommendations = await response.json();
+        renderRecommendations(recommendations);
+    } catch (error) {
+        console.error(error);
+        container.innerHTML = `
+            <div class="no-recommendations" style="color: var(--accent-coral);">
+                <i class="fa-solid fa-circle-exclamation"></i> 추천 목록을 불러오는 중 오류가 발생했습니다.
+            </div>
+        `;
+    }
+}
+
+function renderRecommendations(recommendations) {
+    const container = document.getElementById("recommendations-container");
+    if (!container) return;
+    
+    if (recommendations.length === 0) {
+        container.innerHTML = `
+            <div class="no-recommendations">
+                <i class="fa-solid fa-music"></i> 아직 등록된 추천곡이 없습니다. 첫 번째 추천곡을 남겨보세요!
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = recommendations.map(rec => {
+        let dateStr = "";
+        if (rec.timestamp) {
+            try {
+                const date = new Date(rec.timestamp);
+                dateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+            } catch (e) {
+                dateStr = rec.timestamp;
+            }
+        }
+
+        return `
+            <div class="recommend-card" style="margin-bottom: 15px;">
+                <div class="recommend-card-header">
+                    <div class="recommend-song-info">
+                        <h4>${escapeHtml(rec.title)}</h4>
+                        <p>${escapeHtml(rec.artist)}</p>
+                    </div>
+                    ${dateStr ? `<span style="font-size: 11px; color: var(--text-muted);">${dateStr}</span>` : ""}
+                </div>
+                <div class="recommend-reason" style="margin-top: 10px;">
+                    ${escapeHtml(rec.reason)}
+                </div>
+            </div>
+        `;
+    }).join("");
+}
+
+// Submit recommendation to Google Sheets
+async function submitRecommendation(event) {
+    event.preventDefault();
+
+    if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL")) {
+        alert("구글 스프레드시트 연동 주소(APPS_SCRIPT_URL)가 설정되지 않았습니다.\napp.js 파일을 열고 주소를 설정해 주세요!");
+        return;
+    }
+
+    const titleInput = document.getElementById("rec-title");
+    const artistInput = document.getElementById("rec-artist");
+    const reasonInput = document.getElementById("rec-reason");
+    const submitBtn = document.getElementById("btn-submit-rec");
+
+    const title = titleInput.value.trim();
+    const artist = artistInput.value.trim();
+    const reason = reasonInput.value.trim();
+
+    if (!title || !artist || !reason) {
+        alert("모든 필드를 입력해주세요.");
+        return;
+    }
+
+    const originalBtnHtml = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> 등록 중...`;
+
+    try {
+        await fetch(APPS_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ title, artist, reason })
+        });
+
+        alert("추천곡이 성공적으로 등록되었습니다!");
+        
+        titleInput.value = "";
+        artistInput.value = "";
+        reasonInput.value = "";
+
+        setTimeout(() => {
+            fetchRecommendations();
+        }, 1500);
+
+    } catch (error) {
+        console.error(error);
+        alert("등록 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+    }
 }

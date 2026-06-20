@@ -908,3 +908,104 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Recommendation Form Styling */
+.recommend-form-container {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+.recommend-form-container .form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.recommend-form-container .form-row .form-group {
+    flex: 1;
+}
+
+.recommend-form-container .form-group {
+    margin-bottom: 15px;
+}
+
+.recommend-form-container label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    text-align: left;
+}
+
+.recommend-form-container input,
+.recommend-form-container textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 12px 14px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+.recommend-form-container input:focus,
+.recommend-form-container textarea:focus {
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
+}
+
+.submit-rec-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.section-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 35px 0;
+}
+
+.recommend-list-section {
+    text-align: left;
+}
+
+.recommend-list-section .list-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
+
+.recommend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Scrollbar for recommend list */
+.recommend-list::-webkit-scrollbar {
+    width: 6px;
+}
+.recommend-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+.recommend-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 140, 66, 0.3);
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .recommend-form-container .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
