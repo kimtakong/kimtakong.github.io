@@ -275,7 +275,7 @@ function savePlaylistChanges() {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
 
-    alert("playlist.json 파일이 다운로드 됩니다.\n이 파일을 c:\\project 폴더에 넣고,\n바탕화면의 [홈페이지 업데이트] 아이콘을 더블클릭하세요!");
+    alert("playlist.json 파일이 다운로드 됩니다.\n이 파일을 C:\\project\\project\\ 폴더에 덮어씌운 뒤,\n폴더 안의 [업데이트.bat] 파일을 더블클릭하여 최신화하세요!");
     exitAdminMode();
 }
 
