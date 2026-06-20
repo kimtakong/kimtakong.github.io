@@ -1060,3 +1060,27 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* YouTube Link Button */
+.youtube-link-btn {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ff3333;
+    background: rgba(255, 51, 51, 0.1);
+    border: 1px solid rgba(255, 51, 51, 0.25);
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: var(--transition-smooth);
+    margin-top: 12px;
+}
+
+.youtube-link-btn:hover {
+    background: rgba(255, 51, 51, 0.2);
+    border-color: rgba(255, 51, 51, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 51, 51, 0.2);
+}
