@@ -4,6 +4,7 @@ let playlist = [];
 let tempPlaylist = []; // Playlist state while editing in admin mode
 let adminAuthenticated = false;
 let currentPasscode = "";
+let currentConsonant = "전체";
 
 // Initialize App
 document.addEventListener("DOMContentLoaded", () => {
@@ -87,17 +88,82 @@ function renderSongs(songs) {
     }).join("");
 }
 
+// Chosung mapping for Korean filter
+const CHOSUNG = [
+    'ㄱ', 'ㄱ', 'ㄴ', 'ㄷ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅂ', 'ㅅ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'
+];
+
+function getFirstChosung(str) {
+    if (!str) return '';
+    const char = str.trim().charAt(0);
+    const code = char.charCodeAt(0);
+    
+    // Check if it's a Hangul syllable
+    if (code >= 0xAC00 && code <= 0xD7A3) {
+        const index = Math.floor((code - 0xAC00) / 28 / 21);
+        return CHOSUNG[index];
+    }
+    
+    // If it's already a single consonant
+    if (code >= 0x3131 && code <= 0x314E) {
+        if (char === 'ㄲ') return 'ㄱ';
+        if (char === 'ㄸ') return 'ㄷ';
+        if (char === 'ㅃ') return 'ㅂ';
+        if (char === 'ㅆ') return 'ㅅ';
+        if (char === 'ㅉ') return 'ㅈ';
+        return char;
+    }
+    
+    // Check if English letter
+    if ((code >= 65 && code <= 90) || (code >= 97 && code <= 122)) {
+        return char.toUpperCase();
+    }
+    
+    return '기타';
+}
+
+function selectConsonant(consonant) {
+    currentConsonant = consonant;
+    
+    // Update active button state
+    document.querySelectorAll(".consonant-btn").forEach(btn => {
+        if (btn.textContent === consonant) {
+            btn.classList.add("active");
+        } else {
+            btn.classList.remove("active");
+        }
+    });
+    
+    filterSongs();
+}
+
 function filterSongs() {
     const query = document.getElementById("songs-search-input").value.toLowerCase().trim();
-    if (!query) {
-        renderSongs(allSongs);
-        return;
+    
+    let filtered = allSongs;
+    
+    // 1. Apply consonant filter
+    if (currentConsonant !== '전체') {
+        filtered = filtered.filter(song => {
+            const chosung = getFirstChosung(song.title);
+            if (currentConsonant === 'A-Z') {
+                return /^[A-Z]$/i.test(chosung);
+            }
+            return chosung === currentConsonant;
+        });
     }
-
-    const filtered = allSongs.filter(song => 
-        song.title.toLowerCase().includes(query) || 
-        song.filename.toLowerCase().includes(query)
-    );
+    
+    // 2. Apply text search query
+    if (query) {
+        filtered = filtered.filter(song => 
+            song.title.toLowerCase().includes(query) || 
+            song.filename.toLowerCase().includes(query)
+        );
+    }
+    
+    // Update total count
+    document.getElementById("total-songs-count").textContent = filtered.length;
+    
     renderSongs(filtered);
 }
 
