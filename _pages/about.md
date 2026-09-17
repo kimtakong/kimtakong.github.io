@@ -17,42 +17,80 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am a Master's student at the Graduate School of Data Science, Pusan National University, Korea, and a member of [BAELAB](https://pnubaelab.github.io/) advised by Prof. Hyerim Bae.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+My research focuses on data-driven decision making for container terminal operations, in particular reducing rehandling in import container yards through survival analysis of container dwell time and learning-based stacking policies.
 
+Citations: <a href='https://scholar.google.com/citations?user=fn1WtU4AAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>
+
+Email: [glorytak74@pusan.ac.kr](mailto:glorytak74@pusan.ac.kr) / [glorytak74@naver.com](mailto:glorytak74@naver.com)
+
+<!-- TODO: CV link. Put the PDF at files/cv.pdf and uncomment:
+[Curriculum Vitae (PDF)](files/cv.pdf)
+-->
+
+# 📌 Research Interests
+- **Container Terminal Operations**: stacking of import containers in the yard, rehandling reduction
+- **Survival Analysis**: discrete-time survival models, conditional residual survival curves for container dwell time
+- **Port Logistics Data**: covariate modeling based on EDI messages
+- **Reinforcement Learning**: learning-based container stacking policies
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2026.08*: &nbsp;🎉 Our paper on container dwell time prediction is published in *Transportation Research Part E*. <!-- date from the Crossref online record (2026-08-20); adjust if needed -->
+<!-- TODO: add more news. Format (newest first):
+- *YYYY.MM*: &nbsp;🎉🎉 One-line description with an optional [link](https://...).
+-->
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TR-E 2026</div><img src='images/pub_2026_tre_dwelltime.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+[Generative AI and Machine learning collaboration for container dwell time prediction via data standardization](https://doi.org/10.1016/j.tre.2026.105171)
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+Minseop Kim\*, **Takhyeong Kim**, Taekhyun Park, Hanbyeol Park, Hyerim Bae
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+*Transportation Research Part E: Logistics and Transportation Review*, vol. 216, 105171, 2026. [[Paper]](https://www.sciencedirect.com/science/article/pii/S1366554526005090)
+<!-- TODO: paper citation count. Replace XXXX with the citation_for_view id from Google Scholar and uncomment:
+<strong><span class='show_paper_citations' data='fn1WtU4AAAAJ:XXXX'></span></strong>
+-->
 </div>
 </div>
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+- [Crop Useful Substance Productivity Prediction Model (작물 유용 물질 생산성 예측 모델)](https://aida.kisti.re.kr/data/afabd0ff-d22b-4ced-9dee-93094fb5276b), **Takhyeong Kim**\*, KISTI AIDA 2025 Competition entry (Best Award), DOI: 10.23057/145
+
+<!-- TODO: add more publications. paper-box format (thumbnail: images/pub_YYYY_venue_keyword.png, 500x300 px):
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">VENUE YEAR</div><img src='images/pub_YYYY_venue_keyword.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Paper Title](https://doi.org/...)
+
+First Author\*, **Takhyeong Kim**, Other Authors
+
+*Journal / Conference*, year. [[Paper]](https://...) [[Code]](https://github.com/...)
+</div>
+</div>
+
+Simple list format (for short entries):
+- [Paper Title](https://...), Author A\*, **Takhyeong Kim**, Author C, **VENUE YEAR**
+-->
+
+\* First author
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025* **Best Award (최우수상)**, 2025 KISTI AI·DATA Competition, Korea Institute of Science and Technology Information (KISTI). [[Entry]](https://aida.kisti.re.kr/data/afabd0ff-d22b-4ced-9dee-93094fb5276b)
+<!-- TODO: add more awards. Format:
+- *YYYY.MM* Award name, Organization.
+-->
 
 # 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- **M.S. in Data Science**, Graduate School of Data Science, Pusan National University, Busan, Korea <!-- TODO: period, e.g. (2025.03 ~ ) -->
+  - Advisor: [Prof. Hyerim Bae](https://pnubaelab.github.io/), BAELAB
+<!-- TODO: B.S. entry. Format:
+- **B.S. in <Major>**, <University>, <City>, Korea (YYYY.MM - YYYY.MM)
+-->
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+<!-- TODO: add internships. Format:
+- *YYYY.MM - YYYY.MM*, [Organization](https://...), City, Country.
+-->
