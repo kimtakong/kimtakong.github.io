@@ -82,11 +82,11 @@ TODO: add more awards. Format:
 # 📖 Educations
 - **M.S. in Data Science**, Graduate School of Data Science, Pusan National University, Busan, Korea
   - Advisor: [Prof. Hyerim Bae](https://pnubaelab.github.io/), BAELAB
+- **B.S. in Technology Data Engineering**, Division of Systems Management and Engineering (시스템경영공학부 기술데이터학과), Pukyong National University, Busan, Korea (2018.02 - 2024.02)
 
 {% comment %}
 TODO: add the M.S. period after "Korea" above, e.g. (2025.03 ~ ).
-TODO: B.S. entry. Format:
-- **B.S. in <Major>**, <University>, <City>, Korea (YYYY.MM - YYYY.MM)
+TODO: confirm the official English name of the B.S. department.
 {% endcomment %}
 
 {% comment %}
