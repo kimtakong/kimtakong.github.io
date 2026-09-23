@@ -18,6 +18,5 @@ main:
   - title: "Educations"
     url: "/#-educations"
 
-  # hidden until there is content (see the Internships comment in _pages/about.md)
-  # - title: "Internships"
-  #   url: "/#-internships"
+  - title: "Work Experience"
+    url: "/#-work-experience"
