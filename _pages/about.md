@@ -90,11 +90,9 @@ TODO: confirm the official English name of the B.S. department.
 {% endcomment %}
 
 # 💻 Work Experience
-- *2024.10 - 2025.01*, Data Scientist, [Korea Institute of Ocean Science & Technology (KIOST)](https://www.kiost.ac.kr/eng.do), Busan, Korea.
+- *2024.10 - 2025.01*, Contract Researcher (Data Scientist), [Korea Institute of Ocean Science & Technology (KIOST)](https://www.kiost.ac.kr/eng.do), Busan, Korea.
 
 {% comment %}
-TODO: rename this section to "Internships" (and the matching entry in _data/navigation.yml)
-if the KIOST position is better described that way.
 TODO: add more entries. Format:
 - *YYYY.MM - YYYY.MM*, Role, [Organization](https://...), City, Country.
 {% endcomment %}
