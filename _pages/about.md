@@ -72,18 +72,15 @@ Author A<sup>*</sup>, **Takhyeong Kim**, Author C
 {% endcomment %}
 
 # 💬 Conference Presentations
-- *2025* 작업 부하 기반 동적 충전 최적화 전략을 통한 AGV 운영 효율 개선, **Takhyeong Kim**, 2025 대한산업공학회 추계학술대회 (oral presentation).
+- *2025.11* [작업 부하 기반 동적 충전 최적화 전략을 통한 AGV 운영 효율 개선](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12484293), **김탁형**, 서준혁, 김도희, 이호인, 배혜림, 2025년 대한산업공학회 추계학술대회, pp. 1845-1856 (oral presentation). [[PDF]](files/2025_kiie_agv_charging.pdf)
 
 {% comment %}
-TODO: the month of the 2025 fall conference (e.g. *2025.11*).
-TODO: co-authors, if any, in the order they appear on the abstract.
-TODO: a link. Options, in order of preference:
-  1. the DBpia page for this abstract once it is indexed  -> [[Paper]](https://www.dbpia.co.kr/journal/articleDetail?nodeId=...)
-  2. the slide deck: export the PPT to PDF, put it at files/2025_kiie_agv_charging.pdf
-     -> [[Slides]](files/2025_kiie_agv_charging.pdf)
-  3. the proceedings volume: [[Proceedings]](https://www.dbpia.co.kr/journal/publicationDetail?publicationId=PLCT00002127)
+TODO: if you prefer romanized author names here, replace them with
+**Takhyeong Kim**, Junhyeok Seo, Dohee Kim, ... (check each spelling first).
+TODO: add the slide deck too, if you want it public:
+put the PPT exported as PDF at files/2025_kiie_agv_charging_slides.pdf -> [[Slides]](files/2025_kiie_agv_charging_slides.pdf)
 TODO: add more presentations. Format:
-- *YYYY.MM* Title, **Takhyeong Kim**, Conference (oral presentation / poster).
+- *YYYY.MM* [Title](https://...), **김탁형**, Co-authors, Conference, pp. x-y (oral presentation / poster). [[PDF]](files/...)
 {% endcomment %}
 
 # 🎖 Honors and Awards
