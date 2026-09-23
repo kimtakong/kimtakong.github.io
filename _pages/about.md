@@ -71,6 +71,21 @@ Author A<sup>*</sup>, **Takhyeong Kim**, Author C
 </div>
 {% endcomment %}
 
+# 💬 Conference Presentations
+- *2025* 작업 부하 기반 동적 충전 최적화 전략을 통한 AGV 운영 효율 개선, **Takhyeong Kim**, 2025 대한산업공학회 추계학술대회 (oral presentation).
+
+{% comment %}
+TODO: the month of the 2025 fall conference (e.g. *2025.11*).
+TODO: co-authors, if any, in the order they appear on the abstract.
+TODO: a link. Options, in order of preference:
+  1. the DBpia page for this abstract once it is indexed  -> [[Paper]](https://www.dbpia.co.kr/journal/articleDetail?nodeId=...)
+  2. the slide deck: export the PPT to PDF, put it at files/2025_kiie_agv_charging.pdf
+     -> [[Slides]](files/2025_kiie_agv_charging.pdf)
+  3. the proceedings volume: [[Proceedings]](https://www.dbpia.co.kr/journal/publicationDetail?publicationId=PLCT00002127)
+TODO: add more presentations. Format:
+- *YYYY.MM* Title, **Takhyeong Kim**, Conference (oral presentation / poster).
+{% endcomment %}
+
 # 🎖 Honors and Awards
 - *2025.12* [작물 유용 물질 생산성 예측 모델](https://aida.kisti.re.kr/data/afabd0ff-d22b-4ced-9dee-93094fb5276b), 2025 KISTI AI·DATA 경진대회, 최우수상 (국가과학기술연구회 이사장상), [[Link]](https://aida.kisti.re.kr/data/afabd0ff-d22b-4ced-9dee-93094fb5276b)
 
