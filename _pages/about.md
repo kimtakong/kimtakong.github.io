@@ -38,6 +38,9 @@ TODO: CV link. Put the PDF at files/cv.pdf and add this line below:
 
 # 🔥 News
 - *2026.08*: &nbsp;🎉 Our paper on container dwell time prediction is published in *Transportation Research Part E*.
+- *2026.01*: &nbsp;🇸🇬 Attended AAAI 2026 in Singapore.
+- *2025.11*: &nbsp;🎤 Gave an oral presentation at the 2025 Fall Conference of the Korean Institute of Industrial Engineers (KIIE).
+- *2025.08*: &nbsp;🇬🇧 Attended the Oxford Machine Learning Summer School (OxML), MLx Representation Learning & GenAI.
 
 {% comment %}
 TODO: the 2026.08 date above comes from the Crossref online record (2026-08-20); adjust if needed.
@@ -95,6 +98,7 @@ TODO: add more awards. Format:
 - **M.S. in Data Science**, Graduate School of Data Science, Pusan National University, Busan, Korea
   - Advisor: [Prof. Hyerim Bae](https://pnubaelab.github.io/), BAELAB
 - **B.S. in Technology Data Engineering**, Division of Systems Management and Engineering (Industrial Engineering), Pukyong National University, Busan, Korea (2018.03 - 2024.02)
+- **[Oxford Machine Learning Summer School (OxML)](https://www.oxfordml.school/)**, MLx Representation Learning & GenAI track, University of Oxford, UK (2025.08)
 
 {% comment %}
 TODO: add the M.S. period after "Korea" above, e.g. (2025.03 ~ ).
