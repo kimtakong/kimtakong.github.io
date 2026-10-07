@@ -58,6 +58,10 @@ TODO: add more news (newest first). Format:
 Minseop Kim<sup>*</sup>, **Takhyeong Kim**, Taekhyun Park, Hanbyeol Park, Hyerim Bae
 
 **Transportation Research Part E: Logistics and Transportation Review**, vol. 216, 105171, 2026. [[DOI]](https://doi.org/10.1016/j.tre.2026.105171)
+
+<small style="color:#6b6b6b;">Elsevier · JCR Q1 (Transportation) · ABDC A<sup>*</sup></small>
+<!-- TODO: add the impact factor once confirmed in Web of Science JCR, e.g.
+     "Elsevier · IF 2024: X.X · JCR Q1 (Transportation) · ABDC A*" -->
 </div>
 </div>
 
