@@ -74,6 +74,27 @@ Author A<sup>*</sup>, **Takhyeong Kim**, Author C
 </div>
 {% endcomment %}
 
+# 🛠 Projects
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">3D Simulator</div><img src='images/proj_yard_simulator.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**Yard Simulator** — browser-based 3D visualization of container terminal yard operations
+
+Built with [three.js](https://threejs.org/); replays yard activity (vessel calls, quay cranes, stacking and retrieval) and overlays colour modes for container flow, tier and predicted dwell time, including survival-model estimates of P(departure within 24 h).
+
+[[Screenshot 1]](images/proj_yard_simulator_full.jpg) [[Screenshot 2]](images/proj_yard_simulator_port.jpg)
+</div>
+</div>
+
+{% comment %}
+The interactive build is not published here because its data files are ~58 MB and contain
+operational records. To publish a demo later, either
+  1. record a short screen capture, upload it (e.g. YouTube), and link it here, or
+  2. push the viewer to its own repo (e.g. kimtakong/yard-simulator) and link the GitHub Pages URL.
+TODO: add more projects. Format: copy the paper-box block above.
+{% endcomment %}
+
 # 💬 Conference Presentations
 - *2025.11* [작업 부하 기반 동적 충전 최적화 전략을 통한 AGV 운영 효율 개선](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12484293), **김탁형**, 서준혁, 김도희, 이호인, 배혜림, 2025년 대한산업공학회 추계학술대회, pp. 1845-1856 (oral presentation). [[PDF]](files/2025_kiie_agv_charging.pdf)
 
