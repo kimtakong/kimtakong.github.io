@@ -50,7 +50,16 @@ TODO: add more news (newest first). Format:
 
 # 📝 Publications 
 
-- [Generative AI and Machine learning collaboration for container dwell time prediction via data standardization](https://www.sciencedirect.com/science/article/pii/S1366554526005090), Minseop Kim<sup>*</sup>, **Takhyeong Kim**, Taekhyun Park, Hanbyeol Park, Hyerim Bae, **Transportation Research Part E: Logistics and Transportation Review**, vol. 216, 105171, 2026. [[DOI]](https://doi.org/10.1016/j.tre.2026.105171)
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TR-E 2026</div><img src='images/pub_2026_tre_dwelltime.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Generative AI and Machine learning collaboration for container dwell time prediction via data standardization](https://www.sciencedirect.com/science/article/pii/S1366554526005090)
+
+Minseop Kim<sup>*</sup>, **Takhyeong Kim**, Taekhyun Park, Hanbyeol Park, Hyerim Bae
+
+**Transportation Research Part E: Logistics and Transportation Review**, vol. 216, 105171, 2026. [[DOI]](https://doi.org/10.1016/j.tre.2026.105171)
+</div>
+</div>
 
 <small><sup>*</sup> indicates first author.</small>
 
