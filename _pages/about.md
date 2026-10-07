@@ -81,17 +81,21 @@ Author A<sup>*</sup>, **Takhyeong Kim**, Author C
 
 **Yard Simulator** — browser-based 3D visualization of container terminal yard operations
 
-Built with [three.js](https://threejs.org/); replays yard activity (vessel calls, quay cranes, stacking and retrieval) and overlays colour modes for container flow, tier and predicted dwell time, including survival-model estimates of P(departure within 24 h).
+Built with [three.js](https://threejs.org/); replays yard activity (vessel calls, quay cranes, stacking and retrieval) and overlays colour modes for container flow, tier and predicted dwell time. Clicking a container opens its EDI event timeline together with the survival-model estimate of its remaining dwell time.
 
-[[Screenshot 1]](images/proj_yard_simulator_full.jpg) [[Screenshot 2]](images/proj_yard_simulator_port.jpg)
+[[Screenshot]](images/proj_yard_simulator_full.jpg) [[Demo video]](files/yard_simulator_demo.mp4)
 </div>
 </div>
+
+<video controls muted playsinline preload="none" width="100%" poster="images/proj_yard_simulator_full.jpg" style="margin-bottom: 1em;">
+  <source src="files/yard_simulator_demo.mp4" type="video/mp4">
+  Your browser cannot play this video. <a href="files/yard_simulator_demo.mp4">Download it instead.</a>
+</video>
 
 {% comment %}
 The interactive build is not published here because its data files are ~58 MB and contain
-operational records. To publish a demo later, either
-  1. record a short screen capture, upload it (e.g. YouTube), and link it here, or
-  2. push the viewer to its own repo (e.g. kimtakong/yard-simulator) and link the GitHub Pages URL.
+operational records; the 30-second capture above stands in for it. To publish the viewer itself
+later, push it to its own repo (e.g. kimtakong/yard-simulator) and link the GitHub Pages URL.
 TODO: add more projects. Format: copy the paper-box block above.
 {% endcomment %}
 
