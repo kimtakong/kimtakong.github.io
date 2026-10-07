@@ -59,11 +59,7 @@ Minseop Kim<sup>*</sup>, **Takhyeong Kim**, Taekhyun Park, Hanbyeol Park, Hyerim
 
 **Transportation Research Part E: Logistics and Transportation Review**, vol. 216, 105171, 2026. [[DOI]](https://doi.org/10.1016/j.tre.2026.105171)
 
-<small style="color:#6b6b6b;">Elsevier · JCR Q1 (Transportation) · ABDC A<sup>*</sup></small>
-{% comment %}
-TODO: add the impact factor once confirmed in Web of Science JCR, e.g.
-"Elsevier · IF 2024: X.X · JCR Q1 (Transportation) · ABDC A*"
-{% endcomment %}
+<small style="color:#6b6b6b;">Elsevier · JIF 9.3 · CiteScore 14.0 · JCR 2025 Q1 in all categories (Economics 12/626, Civil Engineering 6/193; average JIF percentile 95.7) · ABDC A<sup>*</sup></small>
 </div>
 </div>
 
