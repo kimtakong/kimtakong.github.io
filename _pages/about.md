@@ -131,13 +131,12 @@ TODO: add more awards. Format:
 {% endcomment %}
 
 # 📖 Educations
-- **M.S. in Data Science**, Graduate School of Data Science, Pusan National University, Busan, Korea
+- **M.S. in Data Science**, Graduate School of Data Science, Pusan National University, Busan, Korea (2025.03 - 2026.02)
   - Advisor: [Prof. Hyerim Bae](https://pnubaelab.github.io/), BAELAB
 - **B.S. in Technology Data Engineering**, Division of Systems Management and Engineering (Industrial Engineering), Pukyong National University, Busan, Korea (2018.03 - 2024.02)
 - **[Oxford Machine Learning Summer School (OxML)](https://www.oxfordml.school/)**, MLx Representation Learning & GenAI track, University of Oxford, UK (2025.08)
 
 {% comment %}
-TODO: add the M.S. period after "Korea" above, e.g. (2025.03 ~ ).
 TODO: confirm the official English name of the B.S. department.
 {% endcomment %}
 
