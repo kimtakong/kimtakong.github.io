@@ -13,7 +13,7 @@ body {
   padding-bottom: 0em;
   color: $text-color;
   font-family: $global-font-family;
-  line-height: 1.5;
+  line-height: 1.4;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -72,8 +72,8 @@ ins {
 }
 
 ul {
-  padding-inline-start: 2em;
-  margin-block-start: 0.5em;
+  padding-inline-start: 1.5em;
+  margin-block-start: 0.3em;
 }
 
 del a {

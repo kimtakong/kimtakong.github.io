@@ -61,9 +61,26 @@
     }
   }
   h1 {
-    margin-top: 1em;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid $border-color;
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.2em;
+    font-size: $type-size-4;
+    border-bottom: 1px solid $darker-gray;
+  }
+
+  h2 {
+    margin-top: 0.8em;
+    margin-bottom: 0.3em;
+    font-size: $type-size-5;
+    font-style: italic;
+  }
+
+  li {
+    margin-bottom: 0.25em;
+  }
+
+  li > ul {
+    margin-top: 0.1em;
   }
 
   p, li, dl {
