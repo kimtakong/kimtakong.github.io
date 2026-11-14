@@ -6,6 +6,10 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+# Selected Projects card settings
+thesis_figure: "images/proj_thesis_framework.png"  # original thesis figure, unedited
+softlifo_figure: ""           # optional figure for the Soft-LIFO card
+show_softlifo_numbers: false  # set to true only after all co-authors have agreed
 ---
 
 {% if site.google_scholar_stats_use_cdn %}
@@ -29,6 +33,77 @@ TODO: CV link. Put the PDF at files/cv.pdf and add this line below:
 [Curriculum Vitae (PDF)](files/cv.pdf)
 {% endcomment %}
 
+<div class="ko-summary" lang="ko">
+  <p class="ko-summary__title">한국어 요약</p>
+  <p>부산대학교 데이터사이언스대학원 석사과정(2027년 2월 졸업 예정)이며, 항만 물류 데이터를 바탕으로 "예측이 실제 운영 결정을 얼마나 개선하는지"를 연구합니다.</p>
+  <p>컨테이너 체류시간 예측(생존분석, 머신러닝, 생성형 AI 기반 비정형 데이터 정리)과, 그 예측을 적재 의사결정에 연결해 시뮬레이션으로 검증하는 작업을 해 왔습니다.</p>
+  <p>Python, SQL로 실제 운영 데이터(컨테이너 392,475개, 기록 약 140만 건)를 정제하고 분석합니다.</p>
+</div>
+
+# Selected Projects
+
+<div class="proj-grid" lang="ko">
+  <div class="proj-card">
+    {% if page.thesis_figure != "" %}
+    <a class="proj-card__fig" href="{{ page.thesis_figure }}"><img src="{{ page.thesis_figure }}" alt="학위논문 그림" loading="lazy"></a>
+    {% endif %}
+    <div class="proj-card__body">
+      <p class="proj-card__tag">학위논문 (단독 수행)</p>
+      <p class="proj-card__title">조건부 잔여 생존함수 기반 수입 컨테이너 야드 적재 의사결정</p>
+      <p class="proj-card__desc">컨테이너가 언제 나갈지를 결정 시점마다 다시 예측해, 야드의 불필요한 재작업(재취급)을 줄였습니다.</p>
+      <dl class="proj-card__meta">
+        <dt>내 역할</dt>
+        <dd>문제 정의, 데이터 정제(부산항 터미널 컨테이너 392,475개, EDI 기록 약 140만 건), 모델 설계, 49일 적재 시뮬레이션</dd>
+        <dt>핵심 수치</dt>
+        <dd>선행 연구의 적재 규칙 9개 모두 재취급 5.0~42.8% 감소, 사건 시점 갱신 방식 대비 4.2~25.3% 적음</dd>
+      </dl>
+      <p class="proj-card__links"><a href="#thesis">Thesis</a> <a href="#apiems-2026">APIEMS 2026 발표</a></p>
+    </div>
+  </div>
+  <div class="proj-card">
+    <a class="proj-card__fig" href="images/pub_2026_tre_dwelltime.png"><img src="images/pub_2026_tre_dwelltime.png" alt="생성형 AI와 머신러닝 협업 체류시간 예측 프레임워크" loading="lazy"></a>
+    <div class="proj-card__body">
+      <p class="proj-card__tag">Transportation Research Part E 게재, 2저자</p>
+      <p class="proj-card__title">생성형 AI와 머신러닝 협업 체류시간 예측</p>
+      <p class="proj-card__desc">사람이 글로 적은 정보를 생성형 AI로 표준 코드로 바꿔 예측에 활용했습니다.</p>
+      <dl class="proj-card__meta">
+        <dt>내 역할</dt>
+        <dd>예측 결과를 적재 전략에 적용해 효과를 재는 적재 시뮬레이션 설계/구현</dd>
+        <dt>핵심 수치</dt>
+        <dd>예측 오차(MAE) 13.88% 개선, 재배치 최대 13.07% 감소</dd>
+      </dl>
+      <p class="proj-card__links"><a href="https://doi.org/10.1016/j.tre.2026.105171">DOI</a></p>
+    </div>
+  </div>
+  <div class="proj-card">
+    {% if page.softlifo_figure != "" %}
+    <a class="proj-card__fig" href="{{ page.softlifo_figure }}"><img src="{{ page.softlifo_figure }}" alt="라스트마일 배송 경로와 3차원 적재 통합 최적화 그림" loading="lazy"></a>
+    {% endif %}
+    <div class="proj-card__body">
+      <p class="proj-card__tag">Transportation Research Part E 심사 중, 4인 중 3저자</p>
+      <p class="proj-card__title">라스트마일 배송 경로와 3차원 적재 통합 최적화</p>
+      <p class="proj-card__desc">하차 순서를 엄격히 지키는 대신, 짐을 옮기는 수고를 비용으로 바꿔 차량 비용과 같은 기준에서 비교했습니다.</p>
+      <dl class="proj-card__meta">
+        <dt>내 역할</dt>
+        <dd>익명화된 실제 택배 기록으로 4가지 수요 시나리오(Normal/Peak/Bulky/Sparse)를 만드는 데이터 증강 방식 기획/적용, 핵심 알고리즘 아이디어 제안</dd>
+        {% if page.show_softlifo_numbers %}
+        <dt>핵심 수치</dt>
+        <dd>하차 순서를 엄격히 지키는 방식 대비 총비용 65.3~68.0% 감소, 차량 적재율 20%대 초반에서 67.6~74.3%로 향상 (고정 경로 비교 조건)</dd>
+        {% endif %}
+      </dl>
+      <p class="proj-card__links"><a href="#soft-lifo">Publications 항목</a></p>
+    </div>
+  </div>
+</div>
+
+<figure class="demo-video" id="yard-simulator-demo">
+  <video controls muted playsinline preload="none" poster="images/proj_yard_simulator_full.jpg">
+    <source src="files/yard_simulator_demo.mp4" type="video/mp4">
+    Your browser cannot play this video. <a href="files/yard_simulator_demo.mp4">Download it instead.</a>
+  </video>
+  <figcaption>Yard Simulator demo (30 s). See <a href="#software">Software</a> for details.</figcaption>
+</figure>
+
 # Research Interests
 - **Container Terminal Operations**: import container stacking, rehandling reduction, yard simulation
 - **Survival Analysis**: discrete-time hazard models, conditional residual survival functions for dwell time
@@ -41,7 +116,7 @@ TODO: CV link. Put the PDF at files/cv.pdf and add this line below:
 - *2026.08*: Our paper on container dwell time prediction was published in *Transportation Research Part E*.
 - *2026.04*: Filed a Korean patent application on container stacking with generative AI and machine learning.
 - *2026.01*: Attended AAAI 2026 in Singapore.
-- *2025.12*: Received 최우수상 (국가과학기술연구회 이사장상) at the 2025 KISTI AI·DATA Competition.
+- *2025.12*: Received 최우수상 (국가과학기술연구회 이사장상) at the 2025 KISTI AI/DATA Competition.
 - *2025.11*: Oral presentation at the 2025 Fall Conference of the Korean Institute of Industrial Engineers (KIIE).
 - *2025.08*: Attended the Oxford Machine Learning Summer School (OxML), MLx Representation Learning & GenAI.
 
@@ -58,12 +133,13 @@ TODO: add more news (newest first). Format:
   Minseop Kim, **Takhyeong Kim**, Taekhyun Park, Hanbyeol Park, Hyerim Bae<br>
   *Transportation Research Part E: Logistics and Transportation Review*, vol. 216, 105171, 2026. [[DOI]](https://doi.org/10.1016/j.tre.2026.105171)<br>
   <small>JCR 2025 Q1 · top 2% in Economics (12/626) · JIF 9.3</small>
-- **Soft-LIFO Constraint-Based Optimization for Combined Vehicle Routing and Three-Dimensional Loading in Last-Mile Logistics**<br>
+- <span class='anchor' id='soft-lifo'></span>**Soft-LIFO Constraint-Based Optimization for Combined Vehicle Routing and Three-Dimensional Loading in Last-Mile Logistics**<br>
+  김예린, 유태선, **김탁형**, 배혜림 (Takhyeong Kim: 3rd of 4 authors)<br>
   *Transportation Research Part E: Logistics and Transportation Review*, under review.
 
 {% comment %}
-TODO: add the author line to the Soft-LIFO paper (4 authors, Takhyeong Kim third), e.g.
-  Author A, Author B, **Takhyeong Kim**, Author D<br>
+TODO: replace the Soft-LIFO author line with the confirmed English spellings, keeping the order
+  (김예린, 유태선, 김탁형, 배혜림), e.g. ?, ?, **Takhyeong Kim**, Hyerim Bae<br>
 Format for a new entry:
 - **[Paper Title](https://...)**<br>
   Author A, **Takhyeong Kim**, Author C<br>
@@ -71,7 +147,7 @@ Format for a new entry:
 {% endcomment %}
 
 ## Conference Presentations
-- **Decision-Time Conditional Residual Survival Function for Import Container Stacking**<br>
+- <span class='anchor' id='apiems-2026'></span>**Decision-Time Conditional Residual Survival Function for Import Container Stacking**<br>
   **Takhyeong Kim**, Minseop Kim, Hanbyeol Park, Hyerim Bae<br>
   *Asia Pacific Industrial Engineering and Management Systems Conference (APIEMS 2026)*, Dec. 2026 (oral presentation, scheduled).<br>
   <small>Re-querying the CRSF at every decision reduced rehandles by 17.4% against re-queried point predictions and by 12.2–23.8% against static distribution predictions.</small>
@@ -104,13 +180,6 @@ put the PPT exported as PDF at files/2025_kiie_agv_charging_slides.pdf -> [[Slid
 - **Stacking Simulator**: replays 49 days of EDI event logs in time order, decides stacking positions under nine stacking rules from prior studies, and counts rehandles. Prediction modes (static, event-time update, decision-time re-query) and rules can be swapped to test whether a prediction improves operations.
 - **Yard Simulator**: browser-based 3D visualization of container terminal yard operations built with [three.js](https://threejs.org/). It replays yard activity (vessel calls, quay cranes, stacking and retrieval) with colour modes for container flow, tier and predicted dwell time; clicking a container opens its EDI event timeline with the survival-model estimate of its remaining dwell time. [[Screenshot]](images/proj_yard_simulator_full.jpg) [[Demo video]](files/yard_simulator_demo.mp4)
 
-<details style="margin: 0.3em 0 0.8em 1.5em;">
-  <summary>Yard Simulator demo (30 s)</summary>
-  <video controls muted playsinline preload="none" width="100%" poster="images/proj_yard_simulator_full.jpg">
-    <source src="files/yard_simulator_demo.mp4" type="video/mp4">
-    Your browser cannot play this video. <a href="files/yard_simulator_demo.mp4">Download it instead.</a>
-  </video>
-</details>
 
 {% comment %}
 The interactive Yard Simulator build is not published here because its data files are ~58 MB and contain
@@ -119,7 +188,7 @@ later, push it to its own repo (e.g. kimtakong/yard-simulator) and link the GitH
 {% endcomment %}
 
 # Honors and Awards
-- *2025.12* [작물 유용 물질 생산성 예측 모델](https://aida.kisti.re.kr/data/afabd0ff-d22b-4ced-9dee-93094fb5276b), 2025 KISTI AI·DATA 경진대회, 최우수상 (국가과학기술연구회 이사장상). [[Link]](https://aida.kisti.re.kr/data/afabd0ff-d22b-4ced-9dee-93094fb5276b)
+- *2025.12* [작물 유용 물질 생산성 예측 모델](https://aida.kisti.re.kr/data/afabd0ff-d22b-4ced-9dee-93094fb5276b), 2025 KISTI AI/DATA 경진대회, 최우수상 (국가과학기술연구회 이사장상). [[Link]](https://aida.kisti.re.kr/data/afabd0ff-d22b-4ced-9dee-93094fb5276b)
 
 # Education
 - **M.S. in Data Science**, Graduate School of Data Science, Pusan National University, Busan, Korea (2025.03 – 2027.02, expected)

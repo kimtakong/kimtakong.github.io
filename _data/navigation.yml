@@ -1,28 +1,20 @@
-# main links links
+# main links (anchors on the single-page homepage)
 main:
-  - title: "About Me"
-    url: "/#about-me"
-
-  - title: "Research Interests"
-    url: "/#-research-interests"
-
-  - title: "News"
-    url: "/#-news"
+  - title: "Projects"
+    url: "/#selected-projects"
 
   - title: "Publications"
-    url: "/#-publications"
+    url: "/#publications"
 
-  - title: "Projects"
-    url: "/#-projects"
+  - title: "Talks"
+    url: "/#talks-and-demonstrations"
 
-  - title: "Conference Presentations"
-    url: "/#-conference-presentations"
+  - title: "Software"
+    url: "/#software"
 
-  - title: "Honors and Awards"
-    url: "/#-honors-and-awards"
+  - title: "Education"
+    url: "/#education"
 
-  - title: "Educations"
-    url: "/#-educations"
-
-  - title: "Work Experience"
-    url: "/#-work-experience"
+# TODO: add a CV item once an English CV without address/phone is at files/cv.pdf
+#  - title: "CV"
+#    url: "/files/cv.pdf"

@@ -11,6 +11,7 @@ description              : "Master's student, Graduate School of Data Science, P
 url                      : "https://kimtakong.github.io"
 repository               : "kimtakong/kimtakong.github.io"
 google_scholar_stats_use_cdn : true
+og_image                 : "images/profile.jpg"  # link preview image (KakaoTalk, Slack, etc.)
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
