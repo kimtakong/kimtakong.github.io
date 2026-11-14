@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 # Selected Projects card settings
 thesis_figure: "images/proj_thesis_framework.png"  # original thesis figure, unedited
-softlifo_figure: ""           # optional figure for the Soft-LIFO card
+softlifo_figure: "images/proj_softlifo_framework.png"  # original paper figure, unedited
 show_softlifo_numbers: false  # set to true only after all co-authors have agreed
 ---
 
@@ -34,10 +34,8 @@ TODO: CV link. Put the PDF at files/cv.pdf and add this line below:
 {% endcomment %}
 
 <div class="ko-summary" lang="ko">
-  <p class="ko-summary__title">한국어 요약</p>
   <p>부산대학교 데이터사이언스대학원 석사과정(2027년 2월 졸업 예정)이며, 항만 물류 데이터를 바탕으로 "예측이 실제 운영 결정을 얼마나 개선하는지"를 연구합니다.</p>
-  <p>컨테이너 체류시간 예측(생존분석, 머신러닝, 생성형 AI 기반 비정형 데이터 정리)과, 그 예측을 적재 의사결정에 연결해 시뮬레이션으로 검증하는 작업을 해 왔습니다.</p>
-  <p>Python, SQL로 실제 운영 데이터(컨테이너 392,475개, 기록 약 140만 건)를 정제하고 분석합니다.</p>
+  <p>컨테이너 체류시간을 예측(생존분석, 머신러닝, 생성형 AI 기반 비정형 데이터 정리)하고, 그 예측을 적재 의사결정에 연결해 시뮬레이션으로 검증합니다.</p>
 </div>
 
 # Selected Projects
@@ -85,7 +83,7 @@ TODO: CV link. Put the PDF at files/cv.pdf and add this line below:
       <p class="proj-card__desc">하차 순서를 엄격히 지키는 대신, 짐을 옮기는 수고를 비용으로 바꿔 차량 비용과 같은 기준에서 비교했습니다.</p>
       <dl class="proj-card__meta">
         <dt>내 역할</dt>
-        <dd>익명화된 실제 택배 기록으로 4가지 수요 시나리오(Normal/Peak/Bulky/Sparse)를 만드는 데이터 증강 방식 기획/적용, 핵심 알고리즘 아이디어 제안</dd>
+        <dd>익명화된 실제 택배 기록으로 4가지 수요 시나리오(Normal/Peak/Bulky/Sparse)를 만드는 데이터 증강 방식 기획/적용</dd>
         {% if page.show_softlifo_numbers %}
         <dt>핵심 수치</dt>
         <dd>하차 순서를 엄격히 지키는 방식 대비 총비용 65.3~68.0% 감소, 차량 적재율 20%대 초반에서 67.6~74.3%로 향상 (고정 경로 비교 조건)</dd>
