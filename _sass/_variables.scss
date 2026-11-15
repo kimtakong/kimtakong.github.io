@@ -13,10 +13,12 @@ $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 0.5em;
 
 /* system typefaces */
-/* English text uses Times New Roman. Times has no Hangul glyphs, so every Hangul character
-   falls through to Pretendard (loaded in _includes/head/custom.html), the same face as the
-   Korean summary and project cards. */
-$serif                      : "Times New Roman", Times, "Pretendard Variable", Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", serif;
+/* English text and digits use Times New Roman. Hangul uses Pretendard, the same face as the Korean
+   summary and project cards: "Hangul Pretendard" (assets/css/hangul.css) covers only Hangul code
+   points, so it comes first without touching Latin text. Putting Pretendard after Times instead
+   left some syllables in the OS fallback font, because Chrome does not always re-lay out text once
+   a lazily loaded fallback web-font subset arrives. */
+$serif                      : "Hangul Pretendard", "Times New Roman", Times, "Pretendard Variable", Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", serif;
 $sans-serif                 : $serif;
 // $sans-serif                 : Georgia, serif, sans-serif;
 
