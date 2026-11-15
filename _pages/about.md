@@ -131,7 +131,7 @@ TODO: add more news (newest first). Format:
   Minseop Kim, **Takhyeong Kim**, Taekhyun Park, Hanbyeol Park, Hyerim Bae<br>
   *Transportation Research Part E: Logistics and Transportation Review*, vol. 216, 105171, 2026. [[DOI]](https://doi.org/10.1016/j.tre.2026.105171)<br>
   <small>JCR 2025 Q1 · top 2% in Economics (12/626) · JIF 9.3</small>
-- <span class='anchor' id='soft-lifo'></span>**Soft-LIFO Constraint-Based Optimization for Combined Vehicle Routing and Three-Dimensional Loading in Last-Mile Logistics**<br>
+- <span id='soft-lifo'></span>**Soft-LIFO Constraint-Based Optimization for Combined Vehicle Routing and Three-Dimensional Loading in Last-Mile Logistics**<br>
   김예린, 유태선, **김탁형**, 배혜림 (Takhyeong Kim: 3rd of 4 authors)<br>
   *Transportation Research Part E: Logistics and Transportation Review*, under review.
 
@@ -145,7 +145,7 @@ Format for a new entry:
 {% endcomment %}
 
 ## Conference Presentations
-- <span class='anchor' id='apiems-2026'></span>**Decision-Time Conditional Residual Survival Function for Import Container Stacking**<br>
+- <span id='apiems-2026'></span>**Decision-Time Conditional Residual Survival Function for Import Container Stacking**<br>
   **Takhyeong Kim**, Minseop Kim, Hanbyeol Park, Hyerim Bae<br>
   *Asia Pacific Industrial Engineering and Management Systems Conference (APIEMS 2026)*, Dec. 2026 (oral presentation, scheduled).<br>
   <small>Re-querying the CRSF at every decision reduced rehandles by 17.4% against re-queried point predictions and by 12.2–23.8% against static distribution predictions.</small>
