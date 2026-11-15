@@ -55,7 +55,7 @@ TODO: CV link. Put the PDF at files/cv.pdf and add this line below:
         <dt>핵심 수치</dt>
         <dd>선행 연구의 적재 규칙 9개 모두 재취급 5.0~42.8% 감소, 사건 시점 갱신 방식 대비 4.2~25.3% 적음</dd>
       </dl>
-      <p class="proj-card__links"><a href="#thesis">Thesis</a> <a href="#apiems-2026">APIEMS 2026 발표</a></p>
+      <p class="proj-card__links"><a href="files/thesis_abstract.pdf">초록 (PDF)</a> <a href="#thesis">Thesis</a> <a href="#apiems-2026">APIEMS 2026 발표</a></p>
     </div>
   </div>
   <div class="proj-card">
@@ -160,7 +160,7 @@ put the PPT exported as PDF at files/2025_kiie_agv_charging_slides.pdf -> [[Slid
 
 ## Thesis
 - **Yard Stacking Decisions for Import Containers Based on Conditional Residual Survival Functions: Effects of Prediction Representation and Re-querying on Rehandling**<br>
-  M.S. Thesis, Graduate School of Data Science, Pusan National University, Feb. 2027 (expected).<br>
+  M.S. Thesis, Graduate School of Data Science, Pusan National University, Feb. 2027 (expected). [[Abstract (PDF)]](files/thesis_abstract.pdf)<br>
   <small>Built on 392,475 containers (about 1.4 million EDI records) from a terminal in Busan. In a 49-day stacking simulation, re-querying reduced rehandles by 5.0–42.8% across all nine stacking rules from prior studies and by 4.2–25.3% against event-time updating.</small>
 
 # Patents
